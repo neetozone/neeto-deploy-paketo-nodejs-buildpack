@@ -1,42 +1,31 @@
-
+\
 [buildpack]
   uri = "build/buildpack.tgz"
 
-[[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/node-engine@6.0.0"
+[[targets]]
+os = "linux"
+arch = "amd64"
 
 [[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/node-start@2.2.7"
+  uri = "../node-engine/build/buildpackage.cnb"
 
 [[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/npm-install@2.0.0"
+  uri = "../node-start/build/buildpackage.cnb"
 
 [[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/npm-start@2.1.20"
+  uri = "../neeto-deploy-paketo-npm-install-buildpack/build/buildpackage-linux-amd64.cnb"
 
 [[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/yarn-install@2.2.5"
+  uri = "../neeto-deploy-paketo-npm-start-buildpack/build/buildpackage.cnb"
 
 [[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/yarn@2.0.0"
+  uri = "../neeto-deploy-paketo-yarn-install-buildpack/build/buildpackage.cnb"
 
 [[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/yarn-start@2.1.6"
+  uri = "../yarn/build/buildpackage.cnb"
 
 [[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/procfile@5.11.1"
+  uri = "../neeto-deploy-paketo-yarn-start-buildpack/build/buildpackage.cnb"
 
 [[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/environment-variables@4.9.1"
-
-[[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/image-labels@4.10.0"
-
-[[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/ca-certificates@3.10.2"
-
-[[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/node-run-script@2.1.7"
-
-[[dependencies]]
-  uri = "urn:cnb:registry:paketo-buildpacks/watchexec@3.5.2"
+  uri = "../node-run-script/build/buildpackage.cnb"

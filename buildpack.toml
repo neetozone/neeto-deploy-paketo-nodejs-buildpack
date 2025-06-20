@@ -2,7 +2,7 @@ api = "0.7"
 
 [buildpack]
   homepage = "https://github.com/paketo-buildpacks/nodejs"
-  id = "paketo-buildpacks/nodejs"
+  id = "neeto-deploy/nodejs"
   name = "Paketo Buildpack for Node.js"
 
   [[buildpack.licenses]]
@@ -15,138 +15,65 @@ api = "0.7"
 [[order]]
 
   [[order.group]]
-    id = "paketo-buildpacks/ca-certificates"
+    id = "neeto-deploy/node-engine"
+    version = "5.2.3"
+
+  [[order.group]]
+    id = "neeto-deploy/yarn"
+    version = "1.3.29"
+
+  [[order.group]]
+    id = "neeto-deploy/yarn-install"
+    version = "2.1.10"
+
+  [[order.group]]
+    id = "neeto-deploy/node-run-script"
     optional = true
-    version = "3.10.2"
+    version = "2.0.4"
 
   [[order.group]]
-    id = "paketo-buildpacks/watchexec"
+    id = "neeto-deploy/node-start"
     optional = true
-    version = "3.5.2"
+    version = "2.1.18"
 
   [[order.group]]
-    id = "paketo-buildpacks/node-engine"
-    version = "6.0.0"
-
-  [[order.group]]
-    id = "paketo-buildpacks/yarn"
-    version = "2.0.0"
-
-  [[order.group]]
-    id = "paketo-buildpacks/yarn-install"
-    version = "2.2.5"
-
-  [[order.group]]
-    id = "paketo-buildpacks/node-run-script"
+    id = "neeto-deploy/yarn-start"
     optional = true
-    version = "2.1.7"
+    version = "2.0.25"
+
+[[order]]
 
   [[order.group]]
-    id = "paketo-buildpacks/node-start"
+    id = "neeto-deploy/node-engine"
+    version = "5.2.3"
+
+  [[order.group]]
+    id = "neeto-deploy/npm-install"
+    version = "1.8.1"
+
+  [[order.group]]
+    id = "neeto-deploy/node-run-script"
     optional = true
-    version = "2.2.7"
+    version = "2.0.4"
 
   [[order.group]]
-    id = "paketo-buildpacks/yarn-start"
+    id = "neeto-deploy/node-start"
+    optional = true
+    version = "2.1.18"
+
+  [[order.group]]
+    id = "neeto-deploy/npm-start"
     optional = true
     version = "2.1.6"
 
-  [[order.group]]
-    id = "paketo-buildpacks/procfile"
-    optional = true
-    version = "5.11.1"
-
-  [[order.group]]
-    id = "paketo-buildpacks/environment-variables"
-    optional = true
-    version = "4.9.1"
-
-  [[order.group]]
-    id = "paketo-buildpacks/image-labels"
-    optional = true
-    version = "4.10.0"
-
 [[order]]
 
-  [[order.group]]
-    id = "paketo-buildpacks/ca-certificates"
-    optional = true
-    version = "3.10.2"
 
   [[order.group]]
-    id = "paketo-buildpacks/watchexec"
-    optional = true
-    version = "3.5.2"
+    id = "neeto-deploy/node-engine"
+    version = "5.2.3"
 
   [[order.group]]
-    id = "paketo-buildpacks/node-engine"
-    version = "6.0.0"
+    id = "neeto-deploy/node-start"
+    version = "2.1.18"
 
-  [[order.group]]
-    id = "paketo-buildpacks/npm-install"
-    version = "2.0.0"
-
-  [[order.group]]
-    id = "paketo-buildpacks/node-run-script"
-    optional = true
-    version = "2.1.7"
-
-  [[order.group]]
-    id = "paketo-buildpacks/node-start"
-    optional = true
-    version = "2.2.7"
-
-  [[order.group]]
-    id = "paketo-buildpacks/npm-start"
-    optional = true
-    version = "2.1.20"
-
-  [[order.group]]
-    id = "paketo-buildpacks/procfile"
-    optional = true
-    version = "5.11.1"
-
-  [[order.group]]
-    id = "paketo-buildpacks/environment-variables"
-    optional = true
-    version = "4.9.1"
-
-  [[order.group]]
-    id = "paketo-buildpacks/image-labels"
-    optional = true
-    version = "4.10.0"
-
-[[order]]
-
-  [[order.group]]
-    id = "paketo-buildpacks/ca-certificates"
-    optional = true
-    version = "3.10.2"
-
-  [[order.group]]
-    id = "paketo-buildpacks/watchexec"
-    optional = true
-    version = "3.5.2"
-
-  [[order.group]]
-    id = "paketo-buildpacks/node-engine"
-    version = "6.0.0"
-
-  [[order.group]]
-    id = "paketo-buildpacks/node-start"
-    version = "2.2.7"
-
-  [[order.group]]
-    id = "paketo-buildpacks/procfile"
-    optional = true
-    version = "5.11.1"
-
-  [[order.group]]
-    id = "paketo-buildpacks/environment-variables"
-    optional = true
-    version = "4.9.1"
-
-  [[order.group]]
-    id = "paketo-buildpacks/image-labels"
-    optional = true
-    version = "4.10.0"
