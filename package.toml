@@ -1,4 +1,3 @@
-\
 [buildpack]
   uri = "build/buildpack.tgz"
 
@@ -7,10 +6,10 @@ os = "linux"
 arch = "amd64"
 
 [[dependencies]]
-  uri = "../node-engine/build/buildpackage.cnb"
+  uri = "../neeto-deploy-paketo-node-engine-buildpack/build/buildpackage.cnb"
 
 [[dependencies]]
-  uri = "../node-start/build/buildpackage.cnb"
+  uri = "../neeto-deploy-paketo-node-start-buildpack/build/buildpackage.cnb"
 
 [[dependencies]]
   uri = "../neeto-deploy-paketo-npm-install-buildpack/build/buildpackage-linux-amd64.cnb"
@@ -22,10 +21,10 @@ arch = "amd64"
   uri = "../neeto-deploy-paketo-yarn-install-buildpack/build/buildpackage.cnb"
 
 [[dependencies]]
-  uri = "../yarn/build/buildpackage.cnb"
+  uri = "../neeto-deploy-paketo-yarn-buildpack/build/buildpackage.cnb"
 
 [[dependencies]]
   uri = "../neeto-deploy-paketo-yarn-start-buildpack/build/buildpackage.cnb"
 
 [[dependencies]]
-  uri = "../node-run-script/build/buildpackage.cnb"
+  uri = "../neeto-deploy-paketo-node-run-script-buildpack/build/buildpackage.cnb"
