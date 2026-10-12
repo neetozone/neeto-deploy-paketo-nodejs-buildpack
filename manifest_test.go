@@ -13,7 +13,8 @@ import (
 
 var (
 	quotedValue    = regexp.MustCompile(`=\s*"([^"]*)"`)
-	dependencyName = regexp.MustCompile(`neeto-deploy-paketo-([a-z-]+)-buildpack/`)
+	dependencyName = regexp.MustCompile(`/([a-z-]+):[0-9.]+$`)
+	buildpackID    = regexp.MustCompile(`^(?:neeto-deploy|paketo-buildpacks)/([a-z-]+)$`)
 )
 
 // tomlValues returns the quoted values of key inside every table with the
@@ -69,8 +70,9 @@ func TestUnitManifest(t *testing.T) {
 
 	var ordered []string
 	for _, id := range tomlValues(t, "buildpack.toml", "[[order.group]]", "id") {
-		Expect(id).To(HavePrefix("neeto-deploy/"))
-		ordered = append(ordered, strings.TrimPrefix(id, "neeto-deploy/"))
+		match := buildpackID.FindStringSubmatch(id)
+		Expect(match).NotTo(BeNil(), "unexpected buildpack id %q", id)
+		ordered = append(ordered, match[1])
 	}
 	Expect(ordered).NotTo(BeEmpty())
 
