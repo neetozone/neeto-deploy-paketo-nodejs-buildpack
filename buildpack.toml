@@ -4,6 +4,7 @@ api = "0.7"
   homepage = "https://github.com/paketo-buildpacks/nodejs"
   id = "neeto-deploy/nodejs"
   name = "Paketo Buildpack for Node.js"
+  version = "9.15.9"
 
   [[buildpack.licenses]]
     type = "Apache-2.0"
@@ -16,64 +17,62 @@ api = "0.7"
 
   [[order.group]]
     id = "neeto-deploy/node-engine"
-    version = "6.0.0"
+    version = "7.10.0"
 
   [[order.group]]
     id = "neeto-deploy/yarn"
-    version = "2.0.1"
+    version = "2.3.1"
 
   [[order.group]]
     id = "neeto-deploy/yarn-install"
-    version = "2.1.11"
+    version = "2.7.1"
 
   [[order.group]]
-    id = "neeto-deploy/node-run-script"
+    id = "paketo-buildpacks/node-run-script"
     optional = true
-    version = "2.1.7"
+    version = "2.3.12"
 
   [[order.group]]
-    id = "neeto-deploy/node-start"
+    id = "paketo-buildpacks/node-start"
     optional = true
-    version = "2.2.7"
+    version = "2.5.12"
 
   [[order.group]]
     id = "neeto-deploy/yarn-start"
     optional = true
-    version = "2.0.25"
+    version = "2.4.11"
 
 [[order]]
 
   [[order.group]]
     id = "neeto-deploy/node-engine"
-    version = "6.0.0"
+    version = "7.10.0"
 
   [[order.group]]
-    id = "neeto-deploy/npm-install"
-    version = "1.8.1"
+    id = "paketo-buildpacks/npm-install"
+    version = "2.2.5"
 
   [[order.group]]
-    id = "neeto-deploy/node-run-script"
+    id = "paketo-buildpacks/node-run-script"
     optional = true
-    version = "2.1.7"
+    version = "2.3.12"
 
   [[order.group]]
-    id = "neeto-deploy/node-start"
+    id = "paketo-buildpacks/node-start"
     optional = true
-    version = "2.2.7"
+    version = "2.5.12"
 
   [[order.group]]
-    id = "neeto-deploy/npm-start"
+    id = "paketo-buildpacks/npm-start"
     optional = true
-    version = "2.1.6"
+    version = "2.3.11"
 
 [[order]]
 
-
   [[order.group]]
     id = "neeto-deploy/node-engine"
-    version = "6.0.0"
+    version = "7.10.0"
 
   [[order.group]]
-    id = "neeto-deploy/node-start"
-    version = "2.2.7"
-
+    id = "paketo-buildpacks/node-start"
+    version = "2.5.12"
