@@ -4,7 +4,7 @@ api = "0.7"
   homepage = "https://github.com/paketo-buildpacks/nodejs"
   id = "neeto-deploy/nodejs"
   name = "Paketo Buildpack for Node.js"
-  version = "9.15.10"
+  version = "9.15.11"
 
   [[buildpack.licenses]]
     type = "Apache-2.0"
@@ -17,7 +17,7 @@ api = "0.7"
 
   [[order.group]]
     id = "neeto-deploy/node-engine"
-    version = "7.11.0"
+    version = "7.12.0"
 
   [[order.group]]
     id = "neeto-deploy/yarn"
@@ -46,7 +46,7 @@ api = "0.7"
 
   [[order.group]]
     id = "neeto-deploy/node-engine"
-    version = "7.11.0"
+    version = "7.12.0"
 
   [[order.group]]
     id = "paketo-buildpacks/npm-install"
@@ -71,7 +71,7 @@ api = "0.7"
 
   [[order.group]]
     id = "neeto-deploy/node-engine"
-    version = "7.11.0"
+    version = "7.12.0"
 
   [[order.group]]
     id = "paketo-buildpacks/node-start"
